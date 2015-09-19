@@ -1,0 +1,23 @@
+{
+  "name": "bartender",
+  "version": "1.0.0",
+  "description": "Node - Restify Server for hopOrNot App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brienpafford/bartender.git"
+  },
+  "author": "Brien Pafford <bcpaff@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/brienpafford/bartender/issues"
+  },
+  "homepage": "https://github.com/brienpafford/bartender#readme",
+  "dependencies": {
+    "mongoose": "^4.1.7",
+    "restify": "^4.0.3"
+  }
+}
