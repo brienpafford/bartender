@@ -1,6 +1,6 @@
 var restify 			= require('restify');
 var config 				= require('./config');
-var app 					= restify.createServer({name:'hopList-1'});
+var app 					= restify.createServer({name:'hopList API'});
 
 app.use(restify.fullResponse());
 app.use(restify.bodyParser());
