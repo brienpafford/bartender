@@ -7,4 +7,5 @@ module.exports 			= function(app) {
 
 	app.post('/createBeer', beer.createBeer);
 	app.get('/getBeer', beer.getBeer);
+	app.get('searchBeer', beer.searchBeer);
 };
