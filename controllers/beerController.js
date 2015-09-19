@@ -24,7 +24,7 @@ function beerController () {
 
 	// GET
 
-  this.getBeer = function (req, res, next) {
+  this.getAllBeers = function (req, res, next) {
 
     Beer.find({}, function(err, result) {
       if (err) {
@@ -37,13 +37,27 @@ function beerController () {
     });
   };
 
-  // Get Specific Beer
+  // GET Specific Beer
 
-  this.searchBeer = function (req, res, next) {
+  this.getBeerById = function (req, res, next) {
 
     Beer.findById(req.params._id, function(err, result) {
       if (err) {
         console.log(err);
+        return res.send({'error':err}); 
+      }
+      else {
+        return res.send({'Beer Details':result});
+      }
+    });
+  };
+
+  this.getBeerByName = function (req, res, next) {
+
+    Beer.find({name: req.params.name}, function(err, result) {
+      if (err) {
+        console.log(err)
+        console.log(request);
         return res.send({'error':err}); 
       }
       else {

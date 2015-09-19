@@ -6,6 +6,7 @@ module.exports 			= function(app) {
 	});
 
 	app.post('/createBeer', beer.createBeer);
-	app.get('/getBeer', beer.getBeer);
-	app.get('searchBeer', beer.searchBeer);
+	app.get('/getAllBeers', beer.getAllBeers);
+	app.get('/getBeerById', beer.getBeerById);
+	app.get('/getBeerByName', beer.getBeerByName);
 };
