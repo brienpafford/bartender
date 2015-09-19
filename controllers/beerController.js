@@ -57,7 +57,6 @@ function beerController () {
     Beer.find({name: req.params.name}, function(err, result) {
       if (err) {
         console.log(err)
-        console.log(request);
         return res.send({'error':err}); 
       }
       else {
@@ -66,24 +65,19 @@ function beerController () {
     });
   };
 
-
-
-// UPDATE
-
 // DELETE
 
-	// this.deleteBeer = function (req, res, next) {
-	// 	Beer.find({_id}, function (err, result) {
-	// 		if (err) {
-	// 			console.log(err);
-	// 			console/log('Beer Not Deleted!');
-	// 			return res.send({'error': err});
-	// 		}
-	// 		else {
-	// 			return res.send({result.name + 'Deleted'});
-	// 		};
-	// 	});
-	// };
+	this.removeBeer = function (req, res, next) {
+
+		Beer.remove({name: req.params.name}, function (err) {
+			if (err) {
+				res.send({'error': err});
+			}
+			else {
+				return res.json({ message: 'Beer Deleted!' });
+			};
+		});
+	};
 
 
 return this;
