@@ -16,7 +16,7 @@ function beerController () {
 				return res.send({'error':err});	
 			}
 			else {
-        return res.send({'result':result,'status':'Beer successfully saved'});
+        return res.send({'Object':result,'message': 'Beer successfully saved'});
         console.log(result.name + ' ' + 'Saved')
       }
 		});
@@ -37,7 +37,7 @@ function beerController () {
     });
   };
 
-  // GET Specific Beer
+// GET Beer by ID
 
   this.getBeerById = function (req, res, next) {
 
@@ -45,12 +45,15 @@ function beerController () {
       if (err) {
         console.log(err);
         return res.send({'error':err}); 
-      }
-      else {
+      } else if ({name :!req.params._id}) {
+        return res.json({ message: 'Beer Not Found!' });
+      } else {
         return res.send({'Beer Details':result});
       }
     });
   };
+
+// GET Beer by Name
 
   this.getBeerByName = function (req, res, next) {
 
@@ -58,9 +61,10 @@ function beerController () {
       if (err) {
         console.log(err)
         return res.send({'error':err}); 
-      }
-      else {
-        return res.send({'Beer Details':result});
+      } else if ({name : !req.params.name}) {
+        return res.json({ message: 'Beer Not Found!' });
+      } else {
+        return res.json({'Beer Details':result});
       }
     });
   };
@@ -78,10 +82,7 @@ function beerController () {
 			};
 		});
 	};
-
-
 return this;
-
 };
 
 module.exports = new beerController();
