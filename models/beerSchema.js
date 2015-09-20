@@ -4,10 +4,15 @@ module.exports = (function beerSchema () {
 		var mongoose = require('../db').mongoose;
 
 		var schema = {
-			name		: {type: String, required: true},
-			brewery	: {type: String, required: true},
-			style		: {type: String, required: true},
-			abv			: {type: Number, required: true}
+			name				: {type: String},
+			brewery			: {type: String},
+			style				: {type: String},
+			abv					: {type: Number},
+			ibu					: {type: Number},
+			description : {type: String},
+			availability: {type: String},
+			icon				: {type: String},
+			image				: {type: String}
 		};
 
 		var collectionName = 'hopList';

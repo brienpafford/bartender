@@ -9,6 +9,11 @@ function beerController () {
 	var brewery			= req.params.brewery;
 	var style				= req.params.style;
 	var abv					= req.params.abv;
+  var ibu         = req.params.ibu;
+  var description = req.params.description;
+  var availability= req.params.availability;
+  var icon        = req.params.icon;
+  var image       = req.params.image;
 		
 		Beer.create({name:name,brewery:brewery,style:style,abv:abv}, function(err, result) {
 			if (err) {
