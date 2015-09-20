@@ -32,7 +32,7 @@ function beerController () {
         return res.send({'error':err}); 
       }
       else {
-        return res.send({'Beer Details':result});
+        return res.send({'Beer_Details':result});
       }
     });
   };
@@ -48,7 +48,7 @@ function beerController () {
       } else if ({name :!req.params._id}) {
         return res.json({ message: 'Beer Not Found!' });
       } else {
-        return res.send({'Beer Details':result});
+        return res.send({'Beer_Details':result});
       }
     });
   };
@@ -64,7 +64,7 @@ function beerController () {
       } else if ({name : !req.params.name}) {
         return res.json({ message: 'Beer Not Found!' });
       } else {
-        return res.json({'Beer Details':result});
+        return res.json({'Beer_Details':result});
       }
     });
   };
