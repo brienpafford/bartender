@@ -15,7 +15,7 @@ function beerController () {
   var icon        = req.params.icon;
   var image       = req.params.image;
 		
-		Beer.create({name:name,brewery:brewery,style:style,abv:abv}, function(err, result) {
+		Beer.create({name:name,brewery:brewery,style:style,abv:abv, ibu:ibu, description:description, availability:availability, icon:icon, image:image}, function(err, result) {
 			if (err) {
 				console.log(err);
 				return res.send({'error':err});	
