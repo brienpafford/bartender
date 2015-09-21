@@ -15,7 +15,7 @@ function beerController () {
   var icon        = req.params.icon;
   var image       = req.params.image;
 		
-		Beer.create({name:name,brewery:brewery,style:style,abv:abv, ibu:ibu, description:description, availability:availability, icon:icon, image:image}, function(err, result) {
+		Beer.create({name:name,brewery:brewery,style:style,abv:abv,ibu:ibu,description:description,availability:availability,icon:icon,image:image}, function(err, result) {
 			if (err) {
 				console.log(err);
 				return res.send({'error':err});	
@@ -78,7 +78,7 @@ function beerController () {
 
 	this.removeBeer = function (req, res, next) {
 
-		Beer.remove({name: req.params.name}, function (err) {
+		Beer.remove({_id : req.params._id}, function (err) {
 			if (err) {
 				res.send({'error': err});
 			}
