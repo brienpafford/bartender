@@ -2,7 +2,7 @@ module.exports 			= function(app) {
 	var beer = require('./controllers/beerController');
 
 	app.get('/', function(req, res, next) {
-		return res.send('Hop List API');
+		return res.send('Bartender - MongoDB | Node API for HopOrNot Mobile App');
 	});
 
 	app.post('/createBeer', beer.createBeer);

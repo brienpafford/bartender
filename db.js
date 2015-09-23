@@ -1,9 +1,9 @@
 
-var config				= require('./config');
+// var config				= require('./config');
 var mongoose 			= require('mongoose');
 var mongodbUri  	= require('mongodb-uri');
 
-var uri 					= config.dbPath;
+var uri 					= process.env.MONGOLAB_URI;
 
 var mongooseConnectString = mongodbUri.formatMongoose(uri);
 mongoose.connect(mongooseConnectString);
