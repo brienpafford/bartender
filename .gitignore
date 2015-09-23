@@ -27,3 +27,7 @@ build/Release
 node_modules
 config.json
 secrets.js
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env

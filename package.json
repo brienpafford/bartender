@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Node - Restify Server for hopOrNot App",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
   "keywords": [
     "heroku"
   ],
@@ -20,10 +17,11 @@
   },
   "homepage": "https://github.com/brienpafford/bartender#readme",
   "dependencies": {
+    "forever": "^0.15.1",
     "mongoose": "^4.1.7",
     "restify": "^4.0.3"
   },
-   "engines": {
+  "engines": {
     "node": "0.12.x"
   }
 }
