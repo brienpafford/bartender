@@ -20,7 +20,7 @@
     "forever": "^0.15.1",
     "mongoose": "^4.1.7",
     "restify": "^4.0.3",
-    "mongodb-uri": "latest",
+    "mongodb-uri": "latest"
   },
   "engines": {
     "node": "0.12.x"
