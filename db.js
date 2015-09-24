@@ -3,7 +3,7 @@
 var mongoose 			= require('mongoose');
 var mongodbUri  	= require('mongodb-uri');
 
-var uri 					= process.env.MONGOLAB_URI;
+var uri 					= process.env.MONGODB_URI;
 
 var mongooseConnectString = mongodbUri.formatMongoose(uri);
 mongoose.connect(mongooseConnectString);
