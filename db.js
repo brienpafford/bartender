@@ -1,7 +1,7 @@
 
-var path				= require('path');
+// var config				= require('./config');
 var mongoose 			= require('mongoose');
-var mongodbUri  	= require(path.join(process.cwd(), 'mongodb-uri'));
+var mongodbUri  	= require('mongodb-uri');
 
 var uri 					= process.env.MONGOLAB_URI;
 
