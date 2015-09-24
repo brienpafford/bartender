@@ -18,9 +18,9 @@
   "homepage": "https://github.com/brienpafford/bartender#readme",
   "dependencies": {
     "forever": "^0.15.1",
+    "mongodb-url": "0.0.1",
     "mongoose": "^4.1.7",
-    "restify": "^4.0.3",
-    "mongodb-uri": "latest"
+    "restify": "^4.0.3"
   },
   "engines": {
     "node": "0.12.x"
