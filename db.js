@@ -1,5 +1,5 @@
 
-var path				= require('./path');
+var path				= require('path');
 var mongoose 			= require('mongoose');
 var mongodbUri  	= require(path.join(process.cwd(), 'mongodb-uri'));
 
