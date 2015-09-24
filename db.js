@@ -3,7 +3,7 @@
 var mongoose 			= require('mongoose');
 var mongodbUri  	= require('mongodb-uri');
 
-var uri 					= process.env.MONGOLAB_URI;
+var uri 					= process.env.MONGOLAB_URI || 'mongodb://brienpafford:eYUF2TXXK8@ds041673.mongolab.com:41673/hopornotdb';
 
 var mongooseConnectString = mongodbUri.formatMongoose(uri);
 mongoose.connect(mongooseConnectString);
