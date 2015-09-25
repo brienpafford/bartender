@@ -11,6 +11,6 @@ git clone the repo, cd into it, and npm install. Then run 'Node Server.js'.
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request!
 ## Details
-This app is hosted [here](https://heroku-bartender-node-api.herokuapp.com/).
+This API is hosted [here](https://heroku-bartender-node-api.herokuapp.com/).
 </content>
 </snippet>
